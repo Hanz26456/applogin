@@ -1,10 +1,12 @@
 package com.hanz.loginapp;
 
+import android.app.DatePickerDialog;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
-import android.widget.DatePicker;
+import java.util.Calendar;
+
 import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.Toast;
@@ -12,8 +14,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 public class MainActivity extends AppCompatActivity {
 
-    private EditText etFullName, etUsername, etEmail, etPassword, etConfirmPassword, etPhoneNumber, etAddress;
-    private DatePicker datePicker;
+    private EditText etFullName, etUsername, etEmail, etPassword, etConfirmPassword, etPhoneNumber, etAddress, txtTgl;
     private Spinner spinnerGender;
     private Button btnRegister;
 
@@ -25,13 +26,13 @@ public class MainActivity extends AppCompatActivity {
         // Initialize Views
         etFullName = findViewById(R.id.editTextText);
         etUsername = findViewById(R.id.editTextText1);
-        datePicker = findViewById(R.id.datepicker);
         etEmail = findViewById(R.id.editTextText2);
         etPassword = findViewById(R.id.editTextTextPassword);
         etConfirmPassword = findViewById(R.id.editTextTextPassword2);
         spinnerGender = findViewById(R.id.spinner);
         etPhoneNumber = findViewById(R.id.editTextPhone3);
         etAddress = findViewById(R.id.editTextText3);
+        txtTgl = findViewById(R.id.txt_tgl);  // Ensure you have this EditText in your XML layout
         btnRegister = findViewById(R.id.button);
 
         btnRegister.setOnClickListener(new View.OnClickListener() {
@@ -40,6 +41,37 @@ public class MainActivity extends AppCompatActivity {
                 registerUser();
             }
         });
+
+        // You may want to trigger DatePickerDialog when a user clicks on txtTgl
+        txtTgl.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                showDatePickerDialog();
+            }
+        });
+    }
+
+    private void showDatePickerDialog() {
+        // Get the current date
+        final Calendar calendar = Calendar.getInstance();
+        int year = calendar.get(Calendar.YEAR);
+        int month = calendar.get(Calendar.MONTH);
+        int day = calendar.get(Calendar.DAY_OF_MONTH);
+
+        // Create DatePickerDialog with spinner theme
+        DatePickerDialog datePickerDialog = new DatePickerDialog(
+                MainActivity.this,
+                android.R.style.Theme_Holo_Light_Dialog, // Use spinner theme
+                (view, selectedYear, selectedMonth, selectedDay) -> {
+                    // Set the selected date to the EditText
+                    String date = selectedDay + "/" + (selectedMonth + 1) + "/" + selectedYear;
+                    txtTgl.setText(date);
+                },
+                year, month, day
+        );
+
+        // Show DatePickerDialog
+        datePickerDialog.show();
     }
 
     private void registerUser() {
@@ -52,11 +84,6 @@ public class MainActivity extends AppCompatActivity {
         String phoneNumber = etPhoneNumber.getText().toString().trim();
         String address = etAddress.getText().toString().trim();
         String gender = spinnerGender.getSelectedItem().toString();
-
-        int day = datePicker.getDayOfMonth();
-        int month = datePicker.getMonth() + 1; // Month starts from 0
-        int year = datePicker.getYear();
-        String birthDate = day + "/" + month + "/" + year;
 
         // Basic validation
         if (TextUtils.isEmpty(fullName) || TextUtils.isEmpty(username) || TextUtils.isEmpty(email)
@@ -72,7 +99,7 @@ public class MainActivity extends AppCompatActivity {
         }
 
         // Proceed with registration (e.g., save data or send to server)
-        Toast.makeText(this, "Registrasi Berhasil", Toast.LENGTH_SHORT).show();
-        // You can now save the data to your database or send it to a server
+        Toast.makeText(this, "Selamat Datang " + fullName + ", dengan email: " + email + ",Tanggal Lahir"+ txtTgl+ ",alamat:"+ etAddress.getEditableText(), Toast.LENGTH_SHORT).show();
+// You can now save the data to your database or send it to a server
     }
 }

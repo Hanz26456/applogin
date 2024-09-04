@@ -22,8 +22,8 @@
     <!-- ScrollView for the Form Elements -->
     <ImageView
         android:id="@+id/imageView3"
-        android:layout_width="380dp"
-        android:layout_height="300dp"
+        android:layout_width="306dp"
+        android:layout_height="195dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView2"
@@ -49,7 +49,7 @@
                 android:id="@+id/textView3"
                 android:layout_width="104dp"
                 android:layout_height="wrap_content"
-                android:text="Full Name"
+                android:text="Nama Panjang"
                 android:textColor="#ffffff"
                 android:textSize="15sp"
                 android:textStyle="italic" />
@@ -61,10 +61,9 @@
                 android:layout_marginTop="10dp"
                 android:background="@drawable/edittext_background"
                 android:ems="10"
-                android:hint="Enterfullname"
-                android:inputType="textPersonName"
+                android:inputType="text"
                 android:padding="12dp"
-                android:text="Enter Fullname"
+                android:hint="Masukkan Nama Panjang"
                 android:textColor="#707070"
                 android:textSize="15sp" />
 
@@ -88,7 +87,6 @@
                 android:hint="Username"
                 android:inputType="textPersonName"
                 android:padding="12dp"
-                android:text="Username"
                 android:textColor="#707070"
                 android:textSize="15sp" />
 
@@ -103,20 +101,24 @@
                 android:textSize="15sp"
                 android:textStyle="italic"/>
 
-            <DatePicker
-                android:id="@+id/datepicker"
-                android:layout_width="286dp"
-                android:layout_height="124dp"
+            <EditText
+                android:id="@+id/txt_tgl"
+                android:layout_width="245dp"
+                android:layout_height="57dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
                 android:background="@drawable/edittext_background"
-                android:calendarTextColor="#FFFFFF"
-                android:calendarViewShown="false"
-                android:datePickerMode="spinner" />
+                android:clickable="true"
+                android:focusable="false"
+                android:hint="Pilih Tanggal Lahir anda" />
+
 
             <TextView
                 android:id="@+id/textView5"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Email"
+                android:text="Alamat Email"
                 android:textColor="#ffffff"
                 android:textSize="15sp"
                 android:textStyle="italic" />
@@ -128,10 +130,9 @@
                 android:layout_marginTop="12dp"
                 android:background="@drawable/edittext_background"
                 android:ems="10"
-                android:hint="Email"
-                android:inputType="textPersonName"
+                android:hint="Masukkan Alamat Email Anda"
+                android:inputType="textEmailAddress"
                 android:padding="12dp"
-                android:text="Email Address"
                 android:textColor="#707070"
                 android:textSize="15sp" />
 
@@ -152,9 +153,8 @@
                 android:background="@drawable/edittext_background"
                 android:ems="10"
                 android:hint="Masukkan Password"
-                android:inputType="textPersonName"
+                android:inputType="textPassword"
                 android:padding="12dp"
-                android:text="Masukkan Password"
                 android:textColor="#707070"
                 android:textSize="15sp" />
 
@@ -175,9 +175,8 @@
                 android:background="@drawable/edittext_background"
                 android:ems="10"
                 android:hint="Konfirmasi Password"
-                android:inputType="textPersonName"
+                android:inputType="textPassword"
                 android:padding="12dp"
-                android:text="Konfirmasi Password"
                 android:textColor="#707070"
                 android:textSize="15sp" />
 
@@ -185,7 +184,7 @@
                 android:id="@+id/textView8"
                 android:layout_width="216dp"
                 android:layout_height="wrap_content"
-                android:text="Gender"
+                android:text="Jenis Kelamin"
                 android:textColor="#ffffff"
                 android:textSize="15sp"
                 android:textStyle="italic" />
@@ -201,7 +200,6 @@
                 android:hint="Masukkan Password"
                 android:inputType="textPersonName"
                 android:padding="12dp"
-                android:text="Masukkan Password"
                 android:textColor="#707070"
                 android:textSize="15sp" />
 
@@ -222,9 +220,8 @@
                 android:background="@drawable/edittext_background"
                 android:ems="10"
                 android:hint="Masukkan No Hp Anda"
-                android:inputType="textPersonName"
+                android:inputType="text|phone"
                 android:padding="12dp"
-                android:text="Masukkan No Hp Anda "
                 android:textColor="#707070"
                 android:textSize="15sp" />
 
@@ -244,10 +241,9 @@
                 android:layout_marginTop="12dp"
                 android:background="@drawable/edittext_background"
                 android:ems="10"
-                android:hint="Alamat"
                 android:inputType="textPersonName"
                 android:padding="12dp"
-                android:text="Masukkan Alamat anda"
+                android:hint="Masukkan Alamat anda"
                 android:textColor="#707070"
                 android:textSize="15sp" />
 
@@ -258,7 +254,8 @@
                 android:layout_height="50dp"
                 android:layout_marginTop="32dp"
                 android:background="@drawable/buttonbackgroung"
-                android:text="" />
+                android:text="Registrasi" />
+
         </LinearLayout>
     </ScrollView>
 

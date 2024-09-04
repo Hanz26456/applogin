@@ -2,7 +2,7 @@
 <resources>
     <string name="app_names">login</string>
     <string-array name= "gender_array">
-        <item>Cowo</item>
+        <item>Laki-Laki</item>
         <item>Perempuan</item>
     </string-array>
 </resources>
