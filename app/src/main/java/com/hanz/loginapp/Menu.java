@@ -24,19 +24,25 @@ public class Menu extends AppCompatActivity {
         logoKontakMahasiswa = findViewById(R.id.imageView4);
 
         logoListMahasiswa.setOnClickListener(new View.OnClickListener() {
-
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(Menu.this, ListMHSActivity2.class);
                 startActivity(intent);
             }
         });
+
         logoKontakMahasiswa.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(Menu.this, .class);
+                Intent intent = new Intent(Menu.this, kontakmahasiswa.class);
                 startActivity(intent);
             }
+        });
+
+        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
+            Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
+            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
+            return insets;
         });
     }
 }

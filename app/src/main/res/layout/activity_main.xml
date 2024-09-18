@@ -45,14 +45,6 @@
             android:padding="32dp">
 
             <!-- Full Name -->
-            <TextView
-                android:id="@+id/textView3"
-                android:layout_width="104dp"
-                android:layout_height="wrap_content"
-                android:text="Nama Panjang"
-                android:textColor="#ffffff"
-                android:textSize="15sp"
-                android:textStyle="italic" />
 
             <EditText
                 android:id="@+id/editTextText"
@@ -68,14 +60,6 @@
                 android:textSize="15sp" />
 
             <!-- Username -->
-            <TextView
-                android:id="@+id/textView4"
-                android:layout_width="104dp"
-                android:layout_height="wrap_content"
-                android:text="Username"
-                android:textColor="#ffffff"
-                android:textSize="15sp"
-                android:textStyle="italic" />
 
             <EditText
                 android:id="@+id/editTextText1"
@@ -93,13 +77,6 @@
             <!-- Additional form fields go here -->
 
             <!-- Date of Birth -->
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Tanggal Lahir"
-                android:textColor="#ffffff"
-                android:textSize="15sp"
-                android:textStyle="italic"/>
 
             <EditText
                 android:id="@+id/txt_tgl"
@@ -114,15 +91,6 @@
                 android:hint="Pilih Tanggal Lahir anda" />
 
 
-            <TextView
-                android:id="@+id/textView5"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Alamat Email"
-                android:textColor="#ffffff"
-                android:textSize="15sp"
-                android:textStyle="italic" />
-
             <EditText
                 android:id="@+id/editTextText2"
                 android:layout_width="match_parent"
@@ -135,15 +103,6 @@
                 android:padding="12dp"
                 android:textColor="#707070"
                 android:textSize="15sp" />
-
-            <TextView
-                android:id="@+id/textView6"
-                android:layout_width="104dp"
-                android:layout_height="wrap_content"
-                android:text="Password"
-                android:textColor="#ffffff"
-                android:textSize="15sp"
-                android:textStyle="italic" />
 
             <EditText
                 android:id="@+id/editTextTextPassword"
@@ -158,15 +117,6 @@
                 android:textColor="#707070"
                 android:textSize="15sp" />
 
-            <TextView
-                android:id="@+id/textView7"
-                android:layout_width="216dp"
-                android:layout_height="wrap_content"
-                android:text="Konfirmasi Password"
-                android:textColor="#ffffff"
-                android:textSize="15sp"
-                android:textStyle="italic" />
-
             <EditText
                 android:id="@+id/editTextTextPassword2"
                 android:layout_width="match_parent"
@@ -179,15 +129,6 @@
                 android:padding="12dp"
                 android:textColor="#707070"
                 android:textSize="15sp" />
-
-            <TextView
-                android:id="@+id/textView8"
-                android:layout_width="216dp"
-                android:layout_height="wrap_content"
-                android:text="Jenis Kelamin"
-                android:textColor="#ffffff"
-                android:textSize="15sp"
-                android:textStyle="italic" />
 
             <Spinner
                 android:id="@+id/spinner"
@@ -203,15 +144,6 @@
                 android:textColor="#707070"
                 android:textSize="15sp" />
 
-            <TextView
-                android:id="@+id/textView9"
-                android:layout_width="216dp"
-                android:layout_height="wrap_content"
-                android:text="No HP"
-                android:textColor="#ffffff"
-                android:textSize="15sp"
-                android:textStyle="italic" />
-
             <EditText
                 android:id="@+id/editTextPhone3"
                 android:layout_width="match_parent"
@@ -224,15 +156,6 @@
                 android:padding="12dp"
                 android:textColor="#707070"
                 android:textSize="15sp" />
-
-            <TextView
-                android:id="@+id/textView10"
-                android:layout_width="104dp"
-                android:layout_height="wrap_content"
-                android:text="Alamat"
-                android:textColor="#ffffff"
-                android:textSize="15sp"
-                android:textStyle="italic" />
 
             <EditText
                 android:id="@+id/editTextText3"

@@ -1,3 +1,20 @@
 <resources>
     <string name="app_name">Loginapp</string>
+    <string-array name="Nama_Mahasiswa">
+        <item>Faradila</item>
+        <item>Deden</item>
+        <item>Faris</item>
+        <item>Alex</item>
+        <item>Alif</item>
+        <item>Solli</item>
+        <item>Dendi</item>
+        <item>Reyhan senpai</item>
+        <item>Gani</item>
+        <item>Ajiz</item>
+        <item>Arifin</item>
+        <item>Tyo</item>
+        <item>Sonu</item>
+        <item>Fiqo</item>
+        <item>Ilham</item>
+    </string-array>
 </resources>

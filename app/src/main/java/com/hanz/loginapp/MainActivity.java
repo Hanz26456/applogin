@@ -99,7 +99,7 @@ public class MainActivity extends AppCompatActivity {
         }
 
         // Proceed with registration (e.g., save data or send to server)
-        Toast.makeText(this, "Selamat Datang " + fullName + ", dengan email: " + email + ",Tanggal Lahir"+ txtTgl+ ",alamat:"+ etAddress.getEditableText(), Toast.LENGTH_SHORT).show();
+        Toast.makeText(this, "Selamat Datang " + fullName + ", dengan email: " + email + ",Tanggal Lahir"+ txtTgl, Toast.LENGTH_SHORT).show();
 // You can now save the data to your database or send it to a server
     }
 }
